@@ -2,12 +2,14 @@ const path = require('path')
 
 module.exports = {
     mode: 'development',
-    devtool: 'source-map',
+    devtool: 'none',
     entry: {
         calendar: './calendar/index.js'
     },
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'wwwroot'),
+        library: 'libCalendar',
+        libraryTarget: 'umd',
     },
 }

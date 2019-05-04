@@ -5,5 +5,4 @@ function addZero(src) {
     return src && src.length === 1 ? ('0' + src) : src
 }
 
-export { addZero }
-export default addZero
+module.exports = { addZero }

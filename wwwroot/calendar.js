@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["libCalendar"] = factory();
+	else
+		root["libCalendar"] = factory();
+})(window, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -93,12 +103,21 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-const addZero = __webpack_require__(/*! ./utils */ "./calendar/utils.js").default
+const utils = __webpack_require__(/*! ./utils */ "./calendar/utils.js")
 
 const now = function () {
     const _now = new Date()
-    return _now.getFullYear() + '-' + addZero(_now.getMonth() + 1) + '-' + addZero(_now.getDate()) + ' ' +
-        addZero(_now.getHours()) + ':' + addZero(_now.getMinutes()) + ':' + addZero(_now.getSeconds())
+    return _now.getFullYear() +
+        '-' +
+        utils.addZero(_now.getMonth() + 1) +
+        '-' +
+        utils.addZero(_now.getDate()) +
+        ' ' +
+        utils.addZero(_now.getHours()) +
+        ':' +
+        utils.addZero(_now.getMinutes()) +
+        ':' +
+        utils.addZero(_now.getSeconds())
 }
 
 module.exports = { now }
@@ -110,12 +129,9 @@ module.exports = { now }
 /*!***************************!*\
   !*** ./calendar/utils.js ***!
   \***************************/
-/*! exports provided: addZero, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addZero", function() { return addZero; });
 function addZero(src) {
     if (typeof src === 'number') {
         src = src.toString()
@@ -123,11 +139,10 @@ function addZero(src) {
     return src && src.length === 1 ? ('0' + src) : src
 }
 
-
-/* harmony default export */ __webpack_exports__["default"] = (addZero);
+module.exports = { addZero }
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=calendar.js.map
+});
