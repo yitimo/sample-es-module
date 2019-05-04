@@ -1,18 +1,19 @@
-const utils = require('./utils')
+import addZero from './utils'
 
 const now = function () {
     const _now = new Date()
     return _now.getFullYear() +
         '-' +
-        utils.addZero(_now.getMonth() + 1) +
+        addZero(_now.getMonth() + 1) +
         '-' +
-        utils.addZero(_now.getDate()) +
+        addZero(_now.getDate()) +
         ' ' +
-        utils.addZero(_now.getHours()) +
+        addZero(_now.getHours()) +
         ':' +
-        utils.addZero(_now.getMinutes()) +
+        addZero(_now.getMinutes()) +
         ':' +
-        utils.addZero(_now.getSeconds())
+        addZero(_now.getSeconds())
 }
 
-module.exports = { now }
+export { now }
+export default now

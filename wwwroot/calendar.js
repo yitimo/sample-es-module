@@ -1,14 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["libCalendar"] = factory();
-	else
-		root["libCalendar"] = factory();
-})(window, function() {
-return /******/ (function(modules) { // webpackBootstrap
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -100,27 +90,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /*!***************************!*\
   !*** ./calendar/index.js ***!
   \***************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: now, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-const utils = __webpack_require__(/*! ./utils */ "./calendar/utils.js")
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "now", function() { return now; });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./calendar/utils.js");
+
 
 const now = function () {
     const _now = new Date()
     return _now.getFullYear() +
         '-' +
-        utils.addZero(_now.getMonth() + 1) +
+        Object(_utils__WEBPACK_IMPORTED_MODULE_0__["default"])(_now.getMonth() + 1) +
         '-' +
-        utils.addZero(_now.getDate()) +
+        Object(_utils__WEBPACK_IMPORTED_MODULE_0__["default"])(_now.getDate()) +
         ' ' +
-        utils.addZero(_now.getHours()) +
+        Object(_utils__WEBPACK_IMPORTED_MODULE_0__["default"])(_now.getHours()) +
         ':' +
-        utils.addZero(_now.getMinutes()) +
+        Object(_utils__WEBPACK_IMPORTED_MODULE_0__["default"])(_now.getMinutes()) +
         ':' +
-        utils.addZero(_now.getSeconds())
+        Object(_utils__WEBPACK_IMPORTED_MODULE_0__["default"])(_now.getSeconds())
 }
 
-module.exports = { now }
+
+/* harmony default export */ __webpack_exports__["default"] = (now);
 
 
 /***/ }),
@@ -129,9 +124,12 @@ module.exports = { now }
 /*!***************************!*\
   !*** ./calendar/utils.js ***!
   \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: addZero, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addZero", function() { return addZero; });
 function addZero(src) {
     if (typeof src === 'number') {
         src = src.toString()
@@ -139,10 +137,10 @@ function addZero(src) {
     return src && src.length === 1 ? ('0' + src) : src
 }
 
-module.exports = { addZero }
+
+/* harmony default export */ __webpack_exports__["default"] = (addZero);
 
 
 /***/ })
 
 /******/ });
-});
