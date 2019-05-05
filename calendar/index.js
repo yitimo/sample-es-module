@@ -1,6 +1,6 @@
-import addZero from './utils'
-
-const now = function () {
+const now = async function () {
+    const utils = await import('./utils')
+    const addZero = utils.addZero
     const _now = new Date()
     return _now.getFullYear() +
         '-' +
