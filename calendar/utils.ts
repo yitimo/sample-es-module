@@ -1,4 +1,4 @@
-function addZero(src) {
+function addZero(src): string {
     if (typeof src === 'number') {
         src = src.toString()
     }

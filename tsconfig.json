@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "declaration": true,
+        "sourceMap": false,
+        "outDir": "wwwroot"
+    },
+    "include": [
+        "calendar"
+    ]
+}
