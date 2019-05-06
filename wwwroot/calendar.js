@@ -96,22 +96,22 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "now", function() { return now; });
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./calendar/utils.js");
-
 
 const now = function () {
+    const addZero = __webpack_require__(/*! ../utils */ "./utils/index.js").addZero
+
     const _now = new Date()
     return _now.getFullYear() +
         '-' +
-        Object(_utils__WEBPACK_IMPORTED_MODULE_0__["default"])(_now.getMonth() + 1) +
+        addZero(_now.getMonth() + 1) +
         '-' +
-        Object(_utils__WEBPACK_IMPORTED_MODULE_0__["default"])(_now.getDate()) +
+        addZero(_now.getDate()) +
         ' ' +
-        Object(_utils__WEBPACK_IMPORTED_MODULE_0__["default"])(_now.getHours()) +
+        addZero(_now.getHours()) +
         ':' +
-        Object(_utils__WEBPACK_IMPORTED_MODULE_0__["default"])(_now.getMinutes()) +
+        addZero(_now.getMinutes()) +
         ':' +
-        Object(_utils__WEBPACK_IMPORTED_MODULE_0__["default"])(_now.getSeconds())
+        addZero(_now.getSeconds())
 }
 
 
@@ -120,10 +120,10 @@ const now = function () {
 
 /***/ }),
 
-/***/ "./calendar/utils.js":
-/*!***************************!*\
-  !*** ./calendar/utils.js ***!
-  \***************************/
+/***/ "./utils/index.js":
+/*!************************!*\
+  !*** ./utils/index.js ***!
+  \************************/
 /*! exports provided: addZero, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

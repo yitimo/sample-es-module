@@ -1,4 +1,4 @@
-import addZero from './utils'
+import addZero from '../utils'
 
 const now = function () {
     const _now = new Date()

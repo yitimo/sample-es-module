@@ -10,4 +10,15 @@ module.exports = {
         filename: '[name].js',
         path: path.resolve(__dirname, 'wwwroot'),
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /utils/,
+                    name: 'vendor',
+                    chunks: 'all'
+                },
+            },
+        },
+    },
 }
