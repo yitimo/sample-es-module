@@ -14,7 +14,7 @@ module.exports = {
         splitChunks: {
             cacheGroups: {
                 vendor: {
-                    test: /utils/,
+                    test: /[\\/]utils[\\/]/,
                     name: 'vendor',
                     chunks: 'all'
                 },

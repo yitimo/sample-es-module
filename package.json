@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:calendar": "npm run clean:calendar && npm run webpack",
-    "clean:calendar": "rimraf wwwroot/calendar.js wwwroot/calendar.js.map",
+    "clean:calendar": "rimraf wwwroot/calendar.js wwwroot/vendor.js",
     "webpack": "webpack"
   },
   "author": "yitimo <admin@yitimo.com>",
