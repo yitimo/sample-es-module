@@ -15,4 +15,6 @@ const now = function () {
         utils.addZero(_now.getSeconds())
 }
 
+console.log(now())
+
 module.exports = { now }
