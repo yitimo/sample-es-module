@@ -4,7 +4,10 @@
 
 // console.log(now)
 
-const utils = require('./wwwroot/calendar')
+// const utils = require('./wwwroot/calendar')
 
-console.log(utils.addZero, utils.now)
+import { now } from './wwwroot'
+import { addZero } from './wwwroot/utils'
+
+console.log(addZero, now)
 // utils.

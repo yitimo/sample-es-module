@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:calendar": "npm run clean:calendar && npm run webpack",
-    "clean:calendar": "rimraf wwwroot/calendar.js wwwroot/calendar.js.map wwwroot/**/*.d.ts",
-    "webpack": "webpack"
+    "build:calendar": "npm run clean && npm run webpack",
+    "clean": "rimraf wwwroot/*.js wwwroot/*.js.map wwwroot/*.d.ts",
+    "webpack": "webpack",
+    "tsc:calendar": "npm run clean && tsc"
   },
   "author": "yitimo <admin@yitimo.com>",
   "license": "MIT",

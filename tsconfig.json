@@ -3,7 +3,7 @@
         "baseUrl": ".",
         "declaration": true,
         "sourceMap": false,
-        "outDir": "wwwroot"
+        "outDir": "wwwroot",
     },
     "include": [
         "calendar"
