@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     devtool: 'none',
     entry: {
         calendar: './calendar/index.ts'
