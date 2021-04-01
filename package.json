@@ -1,8 +1,12 @@
 {
   "name": "samples-es-module",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample for es module study.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yitimo/sample-es-module.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:calendar": "npm run clean:calendar && npm run webpack",
@@ -12,8 +16,8 @@
   "author": "yitimo <admin@yitimo.com>",
   "license": "MIT",
   "devDependencies": {
-    "rimraf": "^2.6.3",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.1"
+    "rimraf": "^3.0.2",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
   }
 }
